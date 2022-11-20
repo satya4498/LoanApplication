@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script href="index.js"></script>
     <script>
         function goTo(){
             window.location="index.html";
@@ -10,10 +9,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css" type="text/css">
     <title>Loan Application</title>
 </head>
 <body>
-    <p>Thank You</p>
-    <button onclick="goTo()">back</button>
+    <p>Dear <span id="firstName"></span>,
+        Thank you for your inquiry. A 4 digit verification number has been sent to your email: <span id="userEmail"></span>,<br>
+         please enter it in the following box and submit for confirmation:
+        </p>
+        <div id="validation" class="form-container">
+            <label for="otp" class="label">Code: </label>
+            <input type="text" maxlength="4" class="form-control-otp" id="otp" />
+            
+        </div>
+    <button type="submit" class="btn" id="button">Validate</button>
+    <p class="err-msg" id="otpErr"></p>
+    <script src="index.js"></script>
+    <script src="confirm.js"></script>
 </body>
 </html>
