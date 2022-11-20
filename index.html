@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    <title>Loan Application</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="form-heading">Loan Enquiry Page</h1>
+        <div>
+
+            <form id="myForm" action="">
+                <div class="form-container">
+                    <label for="name" class="label">Name: </label>
+                    <input type="text" class="form-control" id="name" />
+                    <p class="err-msg" id="nameErr"></p>
+                </div>
+                <div class="form-container">
+                    <label for="email" class="label">Email: </label>
+                    <input type="text" class="form-control" id="email" />
+                    <p class="err-msg" id="emailErr"></p>
+                </div>
+                <div class="form-container">
+                    <label for="pan" class="label">PAN*: </label>
+                    <input type="text" maxlength="10" class="form-control" id="pan" />
+                    <p class="err-msg" id="panErr"></p>
+                </div>
+                <div class="form-container">
+                    <label for="amont" class="label">Amount*: </label>
+                    <input type="text" maxlength="9" class="form-control" id="amount" />
+                    <p class="err-msg" id="amtErr"></p>
+                </div>
+                <button type="submit" class="btn" id="button">Submit</button>
+                <p class="err-msg" id="finalErr"></p>
+                <p id="intRate"></p>
+
+            </form>
+        </div>
+
+    </div>
+</body>
+
+</html>

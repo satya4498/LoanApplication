@@ -1,0 +1,41 @@
+.container {
+    background-color: #ffffff;
+    height: 100vh;
+    width: auto;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.err-msg {
+    color: red;
+}
+
+.form-container {
+    margin-bottom: 10px;
+    width: auto;
+
+}
+
+.label {
+    font-weight: 600;
+}
+
+.form-control {
+
+    padding-top: 5px;
+    padding-right: 30vh;
+    border-style: solid;
+    padding-bottom: 5px;
+
+}
+
+#pan {
+    text-transform: uppercase;
+}
+
+.btn {
+    padding: 12px;
+    border-radius: 5px;
+    background-color: rgb(69, 156, 243);
+}
