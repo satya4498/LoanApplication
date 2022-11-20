@@ -29,6 +29,13 @@
     padding-bottom: 5px;
 
 }
+.form-control-otp {
+
+    padding-top: 5px;
+    border-style: solid;
+    padding-bottom: 5px;
+
+}
 
 #pan {
     text-transform: uppercase;
