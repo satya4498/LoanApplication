@@ -1,4 +1,3 @@
-
 let myFormEl = document.getElementById("myForm");
 let nameEl = document.getElementById("name");
 let emailEl = document.getElementById("email");
@@ -14,7 +13,7 @@ let finalErrMsg = document.getElementById("finalErr");
 let interestRateEl = document.getElementById("intRate");
 myFormEl.addEventListener("submit", function(event) {
     if (nameValidation === true && emailValidation === true && panValidation === true && amtValidation === true) {
-        //event.preventDefault();
+    //event.preventDefault();
         if (amtValue > 0) {
             let amount = amtValue;
             let rate = 8.5;
@@ -63,6 +62,7 @@ nameEl.addEventListener("blur", function() {
     } else {
         nameErrMsg.textContent = "";
         nameValidation = true;
+        sessionStorage.setItem("name",val);
     }
 });
 
@@ -86,6 +86,7 @@ emailEl.addEventListener("blur", function() {
         if (c === 1) {
             emailErrMsg.textContent = "";
             emailValidation = true;
+            sessionStorage.setItem("email",emailValue);
         } else {
             emailErrMsg.textContent = "Please enter valid email*";
             emailValidation = false;
