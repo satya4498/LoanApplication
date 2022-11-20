@@ -14,7 +14,7 @@ let finalErrMsg = document.getElementById("finalErr");
 let interestRateEl = document.getElementById("intRate");
 myFormEl.addEventListener("submit", function(event) {
     if (nameValidation === true && emailValidation === true && panValidation === true && amtValidation === true) {
-        event.preventDefault();
+        //event.preventDefault();
         if (amtValue > 0) {
             let amount = amtValue;
             let rate = 8.5;
