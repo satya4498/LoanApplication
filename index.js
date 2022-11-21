@@ -14,15 +14,7 @@ let interestRateEl = document.getElementById("intRate");
 myFormEl.addEventListener("submit", function(event) {
     if (nameValidation === true && emailValidation === true && panValidation === true && amtValidation === true) {
     //event.preventDefault();
-        if (amtValue > 0) {
-            let amount = amtValue;
-            let rate = 8.5;
-            let months = 15 * 12;
-            const interest = (amount * (rate * 0.01)) / months;
-            let emi = ((amount / months) + interest).toFixed(2);
-
-            interestRateEl.textContent = emi + "/month Emi for the tenure of 15 years at 8.5% interest rate.";
-        }
+       
         myFormEl.action = "confirm.html";
         finalErrMsg.textContent = "";
     } else if (nameValidation === false) {
@@ -132,6 +124,16 @@ amtEl.addEventListener("blur", function() {
             amtValue = parseFloat(number);
         } else {
             amtValue = parseInt(number);
+        }
+        
+         if (amtValue > 0) {
+            let amount = amtValue;
+            let rate = 8.5;
+            let months = 15 * 12;
+            const interest = (amount * (rate * 0.01)) / months;
+            let emi = ((amount / months) + interest).toFixed(2);
+
+            interestRateEl.textContent = emi + "/month Emi for the tenure of 15 years at 8.5% interest rate.";
         }
         amtErrMsg.textContent = "";
     } else {
